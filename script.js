@@ -194,11 +194,13 @@ function setupBooking(){
     const payload = { name, email, whatsapp: normalizedWhats, service, date, time, notes, timezone: 'Asia/Dubai' };
 
     try {
-      const res = await fetch(`${CONFIG.APPS_SCRIPT_WEB_APP_URL}`, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({action: 'book', booking: payload})
-      });
+     const res = await fetch(`${CONFIG.APPS_SCRIPT_WEB_APP_URL}`, {
+  method: 'POST',
+  body: JSON.stringify({
+    action: 'book',
+    booking: payload
+  })
+});
       const data = await res.json();
       if (data && data.success) {
         showToast('Request submitted — status: Pending. You will be notified after review.');
