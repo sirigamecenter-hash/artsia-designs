@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Artsia Designs — Friendly freelance design</title>
+  <meta name="description" content="Artsia Designs — creative, clean, and friendly freelance design sessions. Book a session or message on WhatsApp.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Artsia Designs</h1>
+        <p class="tag">Friendly freelance design — bringing your vision to life</p>
+      </div>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h2 class="hero-title">Creative design sessions that feel personal</h2>
+          <p class="hero-desc">I'm a young freelance designer helping small businesses and creators craft memorable visuals — from logos to social posts and branding kits.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#booking" id="bookBtn">Book a Session</a>
+            <a class="btn whatsapp" id="whatsappHero" href="#" title="Message on WhatsApp">Message on WhatsApp</a>
+          </div>
+          <p class="note">No complicated payments — simple booking and friendly chats.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-card">
+            <img src="https://picsum.photos/seed/artsia-hero/640/480" alt="Placeholder design sample">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h3 class="section-title">Services</h3>
+        <p class="section-sub">Tailored services to fit your project's needs. Pick one or combine them.</p>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">🎨</div>
+            <h4>Logo & Brand Identity</h4>
+            <p>Clean, memorable logos and identity systems for small businesses and creators.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📱</div>
+            <h4>Social & Marketing Graphics</h4>
+            <p>Eye-catching posts, banners, and templates for Instagram, Facebook, and more.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🖼️</div>
+            <h4>Illustration & Artwork</h4>
+            <p>Custom illustrations, icons, and visual elements to lift your brand's personality.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📄</div>
+            <h4>Print & Collateral</h4>
+            <p>Business cards, flyers, posters, and print-ready layouts with professional spacing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio / Gallery -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <h3 class="section-title">Portfolio</h3>
+        <p class="section-sub">Some recent work (placeholder images). I'll add real examples soon.</p>
+        <div class="portfolio-grid">
+          <!-- Placeholder images from picsum.photos -->
+          <img src="https://picsum.photos/seed/artsia-1/600/400" alt="Design 1" loading="lazy">
+          <img src="https://picsum.photos/seed/artsia-2/600/400" alt="Design 2" loading="lazy">
+          <img src="https://picsum.photos/seed/artsia-3/600/400" alt="Design 3" loading="lazy">
+          <img src="https://picsum.photos/seed/artsia-4/600/400" alt="Design 4" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="section booking">
+      <div class="container">
+        <h3 class="section-title">Book a Session</h3>
+        <p class="section-sub">Choose a date and pick a time slot that matches my availability. If you prefer, message me on WhatsApp instead.</p>
+
+        <div class="booking-grid">
+          <div class="booking-card">
+            <form id="bookingForm">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="e.g. Alex" required>
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+              <label for="date">Choose a date</label>
+              <input id="date" name="date" type="date" required>
+
+              <label for="time">Available time slots</label>
+              <select id="time" name="time" required>
+                <option value="">Pick a date first</option>
+              </select>
+
+              <label for="notes">Project details (optional)</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Share details or paste links/images..."></textarea>
+
+              <div class="form-actions">
+                <button type="submit" class="btn primary">Send Booking Request</button>
+                <button type="button" class="btn whatsapp" id="whatsappBooking">Message on WhatsApp</button>
+              </div>
+
+              <p class="small">I'll reply to confirm within 24 hours. No payment required to request a session.</p>
+            </form>
+          </div>
+
+          <div class="availability">
+            <h4>Availability</h4>
+            <ul>
+              <li>Weekdays: 4:00 PM – 8:00 PM</li>
+              <li>Saturday, Sunday & holidays: 10:00 AM – 5:00 PM</li>
+            </ul>
+
+            <div class="tips">
+              <h5>How booking works</h5>
+              <p>Select a date and choose a slot. The booking request will open an email draft with the details — or you can message me on WhatsApp with any files or images.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h3 class="section-title">About Artsia Designs</h3>
+        <p class="about-text">Hi — I'm the designer behind Artsia Designs. I focus on approachable, clean visuals that help small brands look professional and feel unique. I love collaborating, iterating, and making sure you leave the session with something useful.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div>
+          <h3 class="section-title">Contact</h3>
+          <p>Prefer to chat? Message me on WhatsApp or send a short message below.</p>
+
+          <p>
+            <strong>WhatsApp:</strong>
+            <a href="#" id="whatsappFooter" class="whats-link">Message on WhatsApp</a>
+          </p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <label for="cname">Name</label>
+          <input id="cname" name="cname" required>
+
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="cmessage" rows="4" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send Message</button>
+            <button type="button" class="btn whatsapp" id="whatsFromContact">WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Artsia Designs — Friendly freelance design</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
