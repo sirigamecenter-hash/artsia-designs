@@ -5,7 +5,7 @@
 */
 
 const CONFIG = {
-  APPS_SCRIPT_WEB_APP_URL: https:'//script.google.com/macros/s/AKfycby6w6PCTg-82n4ZUodfcWB_JHsxHnp4F9_oTx2n1wDE4MsjwuN4J6DVyI2chQXBh9ve/exec', // e.g. https://script.google.com/macros/s/XXXX/exec
+  APPS_SCRIPT_WEB_APP_URL: 'https://script.google.com/macros/s/AKfycby6w6PCTg-82n4ZUodfcWB_JHsxHnp4F9_oTx2n1wDE4MsjwuN4J6DVyI2chQXBh9ve/exec', // e.g. https://script.google.com/macros/s/XXXX/exec
   whatsappNumber: '971509625340', // e.g. '971501234567' (no +)
   email: 'you@example.com',
   name: 'Artsia Designs'
