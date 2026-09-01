@@ -66,7 +66,7 @@
 
           <article class="card">
             <div class="card-icon">🕊️</div>
-            <h4>Cultural & Religious Invitations</h4>
+            <h4>Cultural &amp; Religious Invitations</h4>
             <p>Thoughtfully designed invitations for cultural and religious celebrations and events.</p>
           </article>
 
@@ -119,12 +119,26 @@
 
         <div class="booking-grid">
           <div class="booking-card">
-            <form id="bookingForm">
+            <form id="bookingForm" aria-describedby="booking-help">
               <label for="name">Your name</label>
               <input id="name" name="name" type="text" placeholder="e.g. Alex" required>
 
               <label for="email">Email</label>
               <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+              <label for="whatsapp">WhatsApp number</label>
+              <input id="whatsapp" name="whatsapp" type="tel" placeholder="e.g. +15551234567 (optional)">
+
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Wedding Invitations</option>
+                <option>Cultural &amp; Religious Invitations</option>
+                <option>Birthday Party Invitations</option>
+                <option>Presentations</option>
+                <option>Posters</option>
+                <option>Custom Design Requests</option>
+              </select>
 
               <label for="date">Choose a date</label>
               <input id="date" name="date" type="date" required>
@@ -142,7 +156,7 @@
                 <button type="button" class="btn whatsapp" id="whatsappBooking">Message on WhatsApp</button>
               </div>
 
-              <p class="small">I'll reply to confirm within 24 hours. No payment required to request a session.</p>
+              <p id="booking-help" class="small">Your request will be submitted and marked "Pending". I will review and confirm or reject it. When confirmed you'll receive email and (optionally) a WhatsApp confirmation with the meeting details.</p>
             </form>
           </div>
 
@@ -155,7 +169,7 @@
 
             <div class="tips">
               <h5>How booking works</h5>
-              <p>Select a date and choose a slot. The booking request will open an email draft with the details — or you can message me on WhatsApp with any files or images.</p>
+              <p>Select a date and choose a slot. The booking request will be submitted and marked Pending — you will receive a confirmation email if your booking is confirmed.</p>
             </div>
           </div>
         </div>
