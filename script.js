@@ -191,30 +191,35 @@ function setupBooking(){
       return;
     }
 
-    const payload = { name, email, whatsapp: normalizedWhats, service, date, time, notes, timezone: 'Asia/Dubai' };
+   const payload = { name, email, whatsapp: normalizedWhats, service, date, time, notes, clientTimezone: 'Asia/Dubai' };
+     
+try {
+  const response = await fetch(CONFIG.APPS_SCRIPT_WEB_APP_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/plain;charset=utf-8'
+    },
+    body: JSON.stringify({
+      action: 'book',
+      booking: payload
+    })
+  });
 
-    try {
-     const res = await fetch(`${CONFIG.APPS_SCRIPT_WEB_APP_URL}`, {
-  method: 'POST',
-  body: JSON.stringify({
-    action: 'book',
-    booking: payload
-  })
-});
-      const data = await res.json();
-      if (data && data.success) {
-        showToast('Request submitted — status: Pending. You will be notified after review.');
-        bookingForm.reset();
-        // reload availability so the temporarily reserved slot (Pending) is excluded
-        await loadAvailableSlots(date);
-      } else {
-        showToast('Could not submit booking: ' + (data.message||'Unknown error'));
-      }
-    } catch (err) {
-      console.error(err);
-      showToast('Network error: booking not submitted.');
-    }
-    submitBtn.disabled = false;
+  const data = await response.json();
+
+  if (data.success) {
+    showToast('Request submitted — status: Pending. You will be notified after review.');
+    bookingForm.reset();
+  } else {
+    showToast('Could not submit booking: ' + (data.message || 'Unknown error'));
+  }
+
+} catch (err) {
+  console.error('Booking error:', err);
+  showToast('Network error: booking not submitted.');
+}
+
+submitBtn.disabled = false;
   });
 }
 
